@@ -3,22 +3,22 @@ package agenda.model.repository;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
+
 import agenda.model.Contact;
 
+@Named
+@ApplicationScoped
 public class ContactRepository {
 
 	private Map<String,Contact> contacts;
-	private static ContactRepository instance=null;
+	//private static ContactRepository instance=null;
 	private int index=0;			// Index to create contacts' identifiers.
 	
-	public static ContactRepository getInstance() {
-		
-		if (instance==null) {
-			instance = new ContactRepository();
-			instance.init();
-		}
-		
-		return instance;
+	public ContactRepository()
+	{
+		init();
 	}
 	
 	public void init() {

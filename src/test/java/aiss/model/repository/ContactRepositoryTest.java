@@ -6,8 +6,8 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import aiss.model.Contact;
-import aiss.model.repository.ContactRepository;
+import agenda.model.Contact;
+import agenda.model.repository.ContactRepository;
 
 public class ContactRepositoryTest {
 
@@ -15,7 +15,7 @@ public class ContactRepositoryTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		repository=ContactRepository.getInstance();
+		repository=new ContactRepository();
 		repository.addContact("Test name 1", "000000000");
 		repository.addContact("Test name 2", "000000001");
 		repository.addContact("Test name 3", "000000002");

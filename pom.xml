@@ -10,8 +10,10 @@
     <artifactId>proyecto</artifactId>
 
     <properties>
-        <servlet.version>2.5</servlet.version>        <!-- Servlet version -->
-        <jslt.version>1.2</jslt.version>        <!-- JSLT version -->
+        <servlet.version>2.5</servlet.version>        	<!-- Servlet version -->
+        <jslt.version>1.2</jslt.version>        		<!-- JSLT version -->    
+        <cdi.version>2.0</cdi.version>					<!-- CDI Version-->
+        <weld.version>3.1.6.Final</weld.version>
         <junit.version>4.13</junit.version>        <!-- JUnit version -->
         <mockito.version>1.10.19</mockito.version>        <!-- Mockito version -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,10 +34,20 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+    		<groupId>org.jboss.weld.servlet</groupId>
+    		<artifactId>weld-servlet-shaded</artifactId>
+    		<version>${weld.version}</version>
+		</dependency>
+        <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>${jslt.version}</version>
         </dependency>
+        <dependency>
+        	<groupId>javax.enterprise</groupId>
+        	<artifactId>cdi-api</artifactId>
+        	<version>${cdi.version}</version>
+    	</dependency>
 
         <!-- Test Dependencies -->
         <dependency>
