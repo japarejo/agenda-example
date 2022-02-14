@@ -11,13 +11,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.annotation.WebServlet;
 import agenda.model.Contact;
 import agenda.model.repository.ContactRepository;
 
-/**
- * Servlet implementation class DeleteContactController
- */
+@WebServlet("/contactlist")
 public class ContactListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,14 +28,14 @@ public class ContactListController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// Load contacts
-		ContactRepository repository = ContactRepository.getInstance();
-		Map<String,Contact> contacts = repository.getContacts();
-		
-		 log.log(Level.FINE, "Processing GET request:  " + contacts.size() + " contacts loaded.");
-		
-		// Send contacts to index.jsp
-		request.setAttribute("contacts", contacts);
-		request.getRequestDispatcher("/contactListView.jsp").forward(request, response);
+				ContactRepository repository = ContactRepository.getInstance();
+				Map<String,Contact> contacts = repository.getContacts();
+				
+				 log.log(Level.FINE, "Processing GET request:  " + contacts.size() + " contacts loaded.");
+				
+				// Send contacts to index.jsp
+				request.setAttribute("contacts", contacts);
+				request.getRequestDispatcher("/contactListView.jsp").forward(request, response);
 	
 	}
 	

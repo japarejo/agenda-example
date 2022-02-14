@@ -6,7 +6,7 @@
 
 	<!-- Welcome page -->
 	<welcome-file-list>
-		<welcome-file>contactlist.jsp</welcome-file>
+		<welcome-file>contactlist</welcome-file>
 	</welcome-file-list>
 	
 	<!-- Error page -->
@@ -14,5 +14,5 @@
 		<exception-type>java.lang.Throwable</exception-type>
 		<location>/error.jsp</location>
 	</error-page>
-
+	
 </web-app>
