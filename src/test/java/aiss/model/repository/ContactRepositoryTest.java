@@ -6,8 +6,8 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import aiss.model.Contact;
-import aiss.model.repository.ContactRepository;
+import agenda.model.Contact;
+import agenda.model.repository.ContactRepository;
 
 public class ContactRepositoryTest {
 
