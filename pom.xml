@@ -10,7 +10,7 @@
     <artifactId>proyecto</artifactId>
 
     <properties>
-        <servlet.version>2.5</servlet.version>        <!-- Servlet version -->
+        <servlet.version>3.1.0</servlet.version>        <!-- Servlet version -->
         <jslt.version>1.2</jslt.version>        <!-- JSLT version -->
         <junit.version>4.13</junit.version>        <!-- JUnit version -->
         <mockito.version>1.10.19</mockito.version>        <!-- Mockito version -->
@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
             <version>${servlet.version}</version>
             <scope>provided</scope>
         </dependency>
